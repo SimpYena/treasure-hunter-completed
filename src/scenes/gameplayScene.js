@@ -20,6 +20,7 @@ export class GamePlayScenes extends Container {
     this.player = new Player();
     this.player.x = 50;
     this.player.y = 50;
+    this.player.move();
     this.gameContainer.addChild(this.player);
   }
   initBlob() {
