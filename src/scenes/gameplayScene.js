@@ -2,6 +2,8 @@ import { Container } from "pixi.js";
 import { Dungeon } from "../objects/dungeon";
 import { Player } from "../objects/player";
 import { BlobController } from "../objects/blob/blobController";
+import { Treasure } from "../objects/treasure";
+import { Door } from "../objects/door";
 export class GamePlayScenes extends Container {
   constructor() {
     super();
@@ -15,6 +17,8 @@ export class GamePlayScenes extends Container {
     this.gameContainer.addChild(this.dungeon);
     this.initPlayer();
     this.initBlob();
+    this.initTreasure();
+    this.initDoor();
   }
   initPlayer() {
     this.player = new Player();
@@ -26,6 +30,17 @@ export class GamePlayScenes extends Container {
   initBlob() {
     this.blobs = new BlobController();
     this.gameContainer.addChild(this.blobs);
+  }
+  initTreasure() {
+    this.treasure = new Treasure();
+    this.treasure.x = 400;
+    this.treasure.y = 400;
+    this.gameContainer.addChild(this.treasure);
+  }
+  initDoor() {
+    this.door = new Door();
+    this.door.x = 50;
+    this.gameContainer.addChild(this.door);
   }
   update(deltaTime) {
     this.blobs.update(deltaTime);
