@@ -22,33 +22,33 @@ export class Player extends Container {
     //Left
 
     left.press = () => {
-      this.player.x -= this.velocityX;
-      if (this.player.x <= -20) {
-        this.player.x = -20;
+      this.x -= this.velocityX;
+      if (this.x <= -20) {
+        this.x = -20;
       }
     };
 
     //Up
     up.press = () => {
-      this.player.y -= this.velocityY;
-      if (this.player.y <= -20) {
-        this.player.y = -20;
+      this.y -= this.velocityY;
+      if (this.y <= -20) {
+        this.y = -20;
       }
     };
 
     //Right
     right.press = () => {
-      this.player.x += this.velocityX;
-      if (this.player.x >= 400) {
-        this.player.x = 400;
+      this.x += this.velocityX;
+      if (this.x >= 400) {
+        this.x = 400;
       }
     };
 
     //Down
     down.press = () => {
-      this.player.y += this.velocityY;
-      if (this.player.y >= 400) {
-        this.player.y = 400;
+      this.y += this.velocityY;
+      if (this.y >= 400) {
+        this.y = 400;
       }
     };
   }
